@@ -31,16 +31,20 @@ function appendCat(name){
 }
 
 
-function  prependCat(x, name){
-    x = [name, ...cats];
-    console.log(x);
+function  prependCat( name){
+    return [name, ...cats];
 }
 prependCat()
 
-function removeLastCat(x){
-   return x = cats.shift();
+function removeLastCat(){
+    return cats.slice(0,-1);
+
 
 }
 function removeFirstCat(x){
-    return x = cats.pop();
+    return cats.slice(1)
+}
+
+function appendCat(a){
+    return [...cats,a]
 }
